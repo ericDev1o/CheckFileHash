@@ -1,0 +1,6 @@
+
+enum PropertyStatusesEnum
+{
+    Pending,
+    Published
+}
