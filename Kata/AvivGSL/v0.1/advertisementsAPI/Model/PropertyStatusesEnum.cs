@@ -1,5 +1,5 @@
 
-enum PropertyStatusesEnum
+public enum PropertyStatusesEnum
 {
     Pending,
     Published

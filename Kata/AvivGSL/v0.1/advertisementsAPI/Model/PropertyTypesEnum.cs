@@ -1,4 +1,4 @@
-enum PropertyTypesEnum
+public enum PropertyTypesEnum
 {
     Flat,
     House,
