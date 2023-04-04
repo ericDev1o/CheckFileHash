@@ -1,0 +1,43 @@
+﻿<Window x:Class="WPF_hashCheck.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_hashCheck"
+        mc:Ignorable="d"
+        Title="SHA512 of downloaded file check" 
+        Height="400" 
+        Width="900"
+        Background="{DynamicResource WindowBrush}">
+    <Window.Resources>
+        <SolidColorBrush x:Key="WindowBrush" Color="Black"/>
+    </Window.Resources>
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label>Expected SHA</Label>
+        <StackPanel Grid.Row="1" Margin="5">
+            <TextBox x:Name="filePath" TextWrapping="Wrap" Foreground="White" Background="Black">C:\softwareDownloads\dotnet-sdk-7.0.202-win-x64.exe</TextBox>
+            <TextBox x:Name="expectedHash" TextWrapping="Wrap" Foreground="White" Background="Black">58e9437f2ead1e9edd67d837f7d2e1313d866d510629465b0485965a9540c65eddd6fffafad9cf3261cb476a1dfff20404908f3bf06a7e01bc3bebc0bcb27d39</TextBox>
+            <Button x:Name="checkSHA" 
+            Margin="0,5,0,0" 
+            Click="ButtonCheckSHA_Click"
+            Background="DarkGreen"
+            Foreground="White"
+            >Check hash</Button>
+        </StackPanel>
+        <Label Grid.Column="1">Computed SHA</Label>
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="5">
+            <Label Margin="2" Foreground="White">Computed hash</Label>
+            <TextBlock x:Name="computedHash" TextWrapping="Wrap" Foreground="White">58e9437f2ead1e9edd67d837f7d2e1313d866d510629465b0485965a9540c65eddd6fffafad9cf3261cb476a1dfff20404908f3bf06a7e01bc3bebc0bcb27d39</TextBlock>
+            <Label Margin="2" Foreground="White">Check result</Label>
+            <TextBlock x:Name="checkResult" TextWrapping="Wrap" Foreground="White">Hash checked OK: computed = 58e9437f2ead1e9edd67d837f7d2e1313d866d510629465b0485965a9540c65eddd6fffafad9cf3261cb476a1dfff20404908f3bf06a7e01bc3bebc0bcb27d39, expected = 58e9437f2ead1e9edd67d837f7d2e1313d866d510629465b0485965a9540c65eddd6fffafad9cf3261cb476a1dfff20404908f3bf06a7e01bc3bebc0bcb27d39</TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>
