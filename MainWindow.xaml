@@ -23,8 +23,8 @@
         </Grid.ColumnDefinitions>
         <Label>Expected SHA</Label>
         <StackPanel Grid.Row="1" Margin="5">
-            <TextBox x:Name="filePath" TextWrapping="Wrap" Foreground="White" Background="Black">C:\softwareDownloads\dotnet-sdk-7.0.202-win-x64.exe</TextBox>
-            <TextBox x:Name="expectedHash" TextWrapping="Wrap" Foreground="White" Background="Black">58e9437f2ead1e9edd67d837f7d2e1313d866d510629465b0485965a9540c65eddd6fffafad9cf3261cb476a1dfff20404908f3bf06a7e01bc3bebc0bcb27d39</TextBox>
+            <TextBox x:Name="filePath" TextWrapping="Wrap" Foreground="White" Background="Black">C:\softwareDownloads\dotnet-sdk-7.0.203-win-x64.exe</TextBox>
+            <TextBox x:Name="expectedHash" TextWrapping="Wrap" Foreground="White" Background="Black">b2c09ba8454da835304075760c4f355ee1e394c47402800695c75e2da964c5dcd0bb70c1f0c5c67c425369d7fdc9eb060a3936ea755a140342ba12ea47d7cd8b</TextBox>
             <Button x:Name="checkSHA" 
             Margin="0,5,0,0" 
             Click="ButtonCheckSHA_Click"
