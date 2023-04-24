@@ -1,0 +1,70 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+<Window
+    x:Class="WinUI_hashCheck.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WinUI_hashCheck"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid x:Name="mainGrid" MaxWidth="640">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="641" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="mainGrid.MaxWidth" Value="1008"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="1" Padding="50">
+            <TextBlock Text="Expected hash" TextAlignment="Center" />
+            <TextBox x:Name="filePath" 
+                     TextWrapping="Wrap" 
+                     Foreground="LightGray" 
+                     Background="Black" 
+                     Text="C:\softwareDownloads\dotnet-sdk-7.0.203-win-x64.exe" />
+            <TextBox x:Name="expectedHash" 
+                     TextWrapping="Wrap" 
+                     Foreground="LightGray" 
+                     Background="Black" 
+                     Text="b2c09ba8454da835304075760c4f355ee1e394c47402800695c75e2da964c5dcd0bb70c1f0c5c67c425369d7fdc9eb060a3936ea755a140342ba12ea47d7cd8b" />
+            <Button x:Name="checkSHA" 
+                Margin="0,5,0,0" 
+                Click="ButtonCheckSHA_Click"
+                Background="DarkGreen"
+                Foreground="White"
+             >Check hash</Button>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Padding="50">
+            <TextBlock Margin="2" 
+                       Foreground="White" 
+                       TextAlignment="Center"
+                       Text="Computed hash" />
+            <TextBlock x:Name="computedHash" 
+                       TextWrapping="Wrap" 
+                       Foreground="LightGray" 
+                       Text="58e9437f2ead1e9edd67d837f7d2e1313d866d510629465b0485965a9540c65eddd6fffafad9cf3261cb476a1dfff20404908f3bf06a7e01bc3bebc0bcb27d39" />
+            <TextBlock Margin="2" 
+                       Foreground="White" 
+                       TextAlignment="Center"
+                       Text="Check result" />
+            <TextBlock x:Name="checkResult" 
+                       TextWrapping="Wrap" 
+                       Foreground="LightGray" 
+                       Text="Hash checked OK: computed = 58e9437f2ead1e9edd67d837f7d2e1313d866d510629465b0485965a9540c65eddd6fffafad9cf3261cb476a1dfff20404908f3bf06a7e01bc3bebc0bcb27d39, expected = 58e9437f2ead1e9edd67d837f7d2e1313d866d510629465b0485965a9540c65eddd6fffafad9cf3261cb476a1dfff20404908f3bf06a7e01bc3bebc0bcb27d39" />
+        </StackPanel>
+    </Grid>
+</Window>
