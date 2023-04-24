@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-﻿// Copyright (c) Microsoft Corporation and Contributors.
+// Copyright (c) Microsoft Corporation and Contributors.
 // Licensed under the MIT License.
-
 using Microsoft.UI.Xaml;
-
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
-
 namespace WinUI_hashCheck
 {
     /// <summary>
@@ -34,22 +28,5 @@ namespace WinUI_hashCheck
         }
 
         private Window m_window;
-=======
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
-
-namespace WPF_hashCheck
-{
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
-    public partial class App : Application
-    {
->>>>>>> 77f9900af6207a8a34369bc2e51a29accd4056f6
     }
 }
